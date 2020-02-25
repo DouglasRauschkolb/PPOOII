@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Exercicio2;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Assistente extends Funcionario {
     
@@ -31,13 +26,8 @@ public class Assistente extends Funcionario {
     }
    
     @Override
-    public void exibe_dados(){
+    public void exibeDados(){
         System.out.println("Sobreescrever!");
-    }
-
-    @Override
-    public String toString() {
-        return "Assistente{" + "nr_matricula=" + nr_matricula + ", nome=" + nome + '}';
     }
 
     public Assistente(Integer nr_matricula, String nome) {
