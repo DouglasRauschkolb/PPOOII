@@ -1,9 +1,8 @@
-
 package Exercicio1;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Marca {
     
@@ -48,5 +47,4 @@ public class Marca {
     public String toString() {
         return "Marca{" + "nome=" + nome + ", nr_modelos=" + nr_modelos + ", ano_lancamento=" + ano_lancamento + ", cod_identificador=" + cod_identificador + '}';
     }  
-
 }

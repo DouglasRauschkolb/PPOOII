@@ -1,9 +1,8 @@
-
 package Exercicio1;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Endereco {
     

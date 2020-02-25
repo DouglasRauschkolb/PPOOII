@@ -1,11 +1,10 @@
-
 package Exercicio1;
 
 import java.util.Date;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Proprietario {
     
@@ -67,5 +66,5 @@ public class Proprietario {
         this.rg = rg;
         this.endereco = endereco;
     }     
-    
+
 }

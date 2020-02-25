@@ -1,9 +1,8 @@
-
 package Exercicio1;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Carro {
     
@@ -12,7 +11,7 @@ public class Carro {
     private Integer         ano;
     private Marca           marca;
     private String          chassi;
-    private Proprietario    proprieatrio;
+    private Proprietario    proprietario;
     private Integer         velocidade_max;
     private Integer         velocidade_atual;
     private Integer         nr_portas;
@@ -62,12 +61,12 @@ public class Carro {
         this.chassi = chassi;
     }
 
-    public Proprietario getProprieatrio() {
-        return proprieatrio;
+    public Proprietario getProprietario() {
+        return proprietario;
     }
 
-    public void setProprieatrio(Proprietario proprieatrio) {
-        this.proprieatrio = proprieatrio;
+    public void setProprietario(Proprietario proprietario) {
+        this.proprietario = proprietario;
     }
 
     public Integer getVelocidade_max() {
@@ -135,24 +134,36 @@ public class Carro {
     }
 
     public void acelera(){
-        this.velocidade_atual ++;        
+        if(this.velocidade_atual+1<=this.velocidade_max){
+            this.velocidade_atual ++;
+            System.out.println("Velocidade atual: " + this.velocidade_atual);
+        }else{
+            System.out.println("Carro já está na velocidade máxima!");
+        }      
     }
     
     public void freia(){
-        if(this.velocidade_atual > 1){
+        if(this.velocidade_atual >= 1){
             this.velocidade_atual = 0;
+            System.out.println("Velocidade atual: " + this.velocidade_atual);
         }else{
             System.out.println("Carro já está parado!");
         }
     }
     
     public void troca_marcha(){
-        this.marcha_atual ++;
+        if(this.marcha_atual+1<=this.nr_marchas){
+            this.marcha_atual ++;
+            System.out.println("Marcha atual: " + this.marcha_atual);
+        }else{
+            System.out.println("Já está na ultima marcha!");
+        }
     }
     
     public void reduz_marcha(){
         if(this.marcha_atual > 1){
             this.marcha_atual --;
+            System.out.println("Marcha atual: "+ this.marcha_atual);
         }else{
             System.out.println("Carro já está na primeira marcha");
         }
@@ -161,6 +172,7 @@ public class Carro {
     public void colocar_marcha_re(){
         if(this.velocidade_atual == 0){
             this.marcha_atual = 0;
+            System.out.println("Marcha ré!");
         }else{
             System.out.println("O carro deve estar parado!");
         }
@@ -176,11 +188,6 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" + "modelo=" + modelo + ", cor=" + cor + ", ano=" + ano + ", marca=" + marca + ", chassi=" + chassi + ", proprieatrio=" + proprieatrio + ", velocidade_max=" + velocidade_max + ", velocidade_atual=" + velocidade_atual + ", nr_portas=" + nr_portas + ", tem_teto_solar=" + tem_teto_solar + ", nr_marchas=" + nr_marchas + ", marcha_atual=" + marcha_atual + ", tem_cambio_aut=" + tem_cambio_aut + ", volume_combustivel=" + volume_combustivel + '}';
-    }
-        
-    //Construtor
-    public Carro(Proprietario proprieatrio) {
-        this.proprieatrio = proprieatrio;
-    } 
+        return "Carro{" + "modelo=" + modelo + ", cor=" + cor + ", ano=" + ano + ", marca=" + marca + ", chassi=" + chassi + ", proprietario=" + proprietario + ", velocidade_max=" + velocidade_max + ", velocidade_atual=" + velocidade_atual + ", nr_portas=" + nr_portas + ", tem_teto_solar=" + tem_teto_solar + ", nr_marchas=" + nr_marchas + ", marcha_atual=" + marcha_atual + ", tem_cambio_aut=" + tem_cambio_aut + ", volume_combustivel=" + volume_combustivel + '}';
+    }       
 }
