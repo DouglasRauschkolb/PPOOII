@@ -1,9 +1,8 @@
-
 package Exercicio3;
 
 /**
  *
- * @author douglas.220997
+ * @author douglas.rauschkolb
  */
 public class Ingresso {
     
@@ -17,4 +16,8 @@ public class Ingresso {
         this.valor = valor;
     }
     
+    public void imprimeValor(){
+        System.out.println("Valor do ingreso: " + this.valor);
+    }
+ 
 }
