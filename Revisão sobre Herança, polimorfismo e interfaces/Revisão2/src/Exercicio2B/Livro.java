@@ -1,5 +1,5 @@
 
-package Exercicio2;
+package Exercicio2B;
 
 /**
  *
@@ -14,8 +14,8 @@ public class Livro extends Produto {
         return "Livros{" + super.toString() + "autor=" + autor + '}';
     }
 
-    public Livro(String autor, String nome, Double preco) {
-        super(nome, preco);
+    public Livro(String autor, String nome, Double preco, Integer codigo_barra) {
+        super(nome, preco, codigo_barra);
         this.autor = autor;
     }
     

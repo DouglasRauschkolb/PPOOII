@@ -1,5 +1,5 @@
 
-package Exercicio2;
+package Exercicio2C;
 
 /**
  *
@@ -14,8 +14,8 @@ public class CD extends Produto {
         return "CDs{" + super.toString()+ "numero_faixa=" + numero_faixa + '}';
     }
 
-    public CD(Integer numero_faixa, String nome, Double preco) {
-        super(nome, preco);
+    public CD(Integer numero_faixa, String nome, Double preco, Integer codigo_barra) {
+        super(nome, preco, codigo_barra);
         this.numero_faixa = numero_faixa;
     }
     

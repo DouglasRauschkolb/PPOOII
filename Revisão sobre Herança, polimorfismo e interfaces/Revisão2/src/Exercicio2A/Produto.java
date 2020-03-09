@@ -1,5 +1,5 @@
 
-package Exercicio2;
+package Exercicio2A;
 
 /**
  *
