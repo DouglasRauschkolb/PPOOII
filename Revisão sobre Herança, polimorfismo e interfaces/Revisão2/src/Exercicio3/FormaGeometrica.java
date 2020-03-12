@@ -7,7 +7,7 @@ package Exercicio3;
  */
 public interface FormaGeometrica {
     
-    public Double calulaPerimetro();
-    public Double calulaArea();
+    public Double calculaPerimetro();
+    public Double calculaArea();
     
 }

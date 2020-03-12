@@ -5,19 +5,18 @@ package Exercicio3;
  *
  * @author douglas
  */
-public class Circulo extends Quadrilateros{
+public class Circulo implements FormaGeometrica{
     
     private Double raio;
     
-    public Double calulaArea() {
+    public Double calculaArea() {
         Double area = 3.14 * (this.raio * this.raio);
         return area;
     }
     
     @Override
-    public Double calulaPerimetro(){
-        Double perimetro = 2 * 3.14 * this.raio;
-        return perimetro;
+    public Double calculaPerimetro() {
+        return 2 * 3.14 * this.raio;
     }
 
     @Override
@@ -28,5 +27,7 @@ public class Circulo extends Quadrilateros{
     public Circulo(Double raio) {
         this.raio = raio;
     }
+
+
     
 }

@@ -18,7 +18,7 @@ public class Exercicio3 {
 
         System.out.println("Quantas formas você deseja informar: ");
         int numero_formas = scan.nextInt();
-        Quadrilateros formas[] = new Quadrilateros[numero_formas];
+        FormaGeometrica formas[] = new FormaGeometrica[numero_formas];
 
         for (int l_i = 0; l_i < numero_formas; l_i++) {
             System.out.println("Deseja criar: \n 1 - Quadrado \n 2 - Retângulo \n 3 - Circulo");
@@ -53,8 +53,8 @@ public class Exercicio3 {
         for (int l_i = 0; l_i < numero_formas; l_i++) {
             System.out.println("################# Forma " + (l_i+1) + " ##################");
             System.out.println(formas[l_i].toString());
-            System.out.println("Perimetro: " + formas[l_i].calulaPerimetro());
-            System.out.println("Area: " + formas[l_i].calulaArea());
+            System.out.println("Perimetro: " + formas[l_i].calculaPerimetro());
+            System.out.println("Area: " + formas[l_i].calculaArea());
 
         }
     }

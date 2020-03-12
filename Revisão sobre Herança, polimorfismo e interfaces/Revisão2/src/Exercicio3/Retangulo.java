@@ -7,29 +7,21 @@ package Exercicio3;
  */
 public class Retangulo extends Quadrilateros{
     
-    private Double base;
-    private Double altura;
-    
     @Override
-    public Double calulaArea() {
-        Double area = this.base * this.altura;
+    public Double calculaArea() {
+        Double area = this.lado1 * this.lado2;
         return area;
-    }
-    
-    @Override
-    public Double calulaPerimetro(){
-        Double perimetro = this.base * 2 + this.altura * 2;
-        return perimetro;
-    }
-
-    @Override
-    public String toString() {
-        return "Retangulo{" + "base=" + base + ", altura=" + altura + '}';
     }
 
     public Retangulo(Double base, Double altura) {
-        this.base = base;
-        this.altura = altura;
+        super(base, altura, base, altura);
     } 
+
+    @Override
+    public String toString() {
+        return "Retangulo{ Base: " + this.lado1 + " Altura: "+ this.lado2 +" }";
+    }
     
+    
+
 }

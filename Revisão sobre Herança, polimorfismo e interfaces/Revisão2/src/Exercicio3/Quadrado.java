@@ -7,27 +7,19 @@ package Exercicio3;
  */
 public class Quadrado extends Quadrilateros{
     
-    private Double lado;
-
     @Override
-    public Double calulaArea() {
-        Double area = this.lado * this.lado;
+    public Double calculaArea() {
+        Double area = this.lado1 * this.lado1;
         return area;
-    }
-    
-    @Override
-    public Double calulaPerimetro(){
-        Double perimetro = this.lado * 4;
-        return perimetro;
     }
 
     @Override
     public String toString() {
-        return "Quadrado{" + "lado=" + lado + '}';
+        return "Quadrado{" + "lado=" + lado1 + '}';
     }
     
     public Quadrado(Double lado) {
-        this.lado = lado;
+        super(lado, lado, lado, lado);
     } 
     
 }
