@@ -20,7 +20,7 @@ public class Vetor<T> extends EstruturaBasica<T>{
         return this.elementos[posicao];
     }
 
-    public int buscar(T elemento){
+    public int buscarElemento(T elemento){
         for(int l_i = 0; l_i < tamanho; l_i++){
 			if (elementos[l_i].equals(elemento)) {
 				return l_i;

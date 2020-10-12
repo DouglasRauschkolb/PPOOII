@@ -3,9 +3,8 @@ abstract class EstruturaBasica<T> {
     protected T[] elementos;
     protected Integer tamanho;
 
-    //Construtor
     protected EstruturaBasica() {
-        this.elementos = (T[]) new Object();
+        this.elementos = (T[]) new Object[5];
         this.tamanho = 0;
     }
 
@@ -53,6 +52,7 @@ abstract class EstruturaBasica<T> {
                 this.elementos[l_i] = this.elementos[l_i+1];
             }
         }
+        this.tamanho--;
     }
 
     private void aumentaCapacidade() {

@@ -25,9 +25,7 @@ public class Fila<T> extends EstruturaBasica<T> {
             return null;
         }
         primeiro = this.primeiroElemento();
-        this.tamanho--;
-        this.remover(0);
-        
+        this.remover(0);        
         return primeiro;
     }
 
