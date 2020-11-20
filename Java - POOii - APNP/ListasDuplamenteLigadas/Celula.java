@@ -29,8 +29,8 @@ public class Celula {
         this.anterior = anterior;
     }
 
-    public Celula getProxima(){
-        return this.proxima;
+    public Celula getAnterior(){
+        return this.anterior;
     }
 
     public Object getElemento(){

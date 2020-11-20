@@ -8,9 +8,17 @@ public class ListaDuplamenteLigada {
     
     public void adicionaNoComeco(Object elemento){
         
-        Celula nova = new Celula(this.primeira, null, elemento);
-        this.primeira = nova;
-        this.ultima = this.primeira;
+        Celula nova = new Celula(elemento);
+        
+        //Se estiver vazia
+        if(this.totalDeElementos == 0) {
+            this.primeira = nova;
+            this.ultima = nova;
+        } else {
+            this.primeira.setAnterior(nova);
+            nova.setProxima(this.primeira);
+            this.primeira = nova;
+        }
 
         this.totalDeElementos++;
     }
@@ -20,8 +28,9 @@ public class ListaDuplamenteLigada {
             this.adicionaNoComeco(elemento);
         }else{
             Celula nova = new Celula(elemento);
-            this.ultima = this.ultima.getProxima();
+            nova.setAnterior(this.ultima);
             this.ultima.setProxima(nova);
+            this.ultima = nova;
             this.totalDeElementos++;
         }
     }
@@ -66,17 +75,10 @@ public class ListaDuplamenteLigada {
             this.adicionaNoComeco(elemento);
         } else if (posicao == this.totalDeElementos){
             this.adiciona(elemento);
-        } else if (posicao == this.totalDeElementos - 1){
+        } else {
             Celula proxima = this.pegaCelula(posicao);
             Celula anterior = this.pegaCelula(posicao - 1);
-            Celula nova =  new Celula(anterior.getProxima(), proxima.getProxima(), elemento);
-            anterior.setProxima(nova);
-            proxima.setAnterior(nova);
-            this.totalDeElementos++;
-        } else {
-            Celula proxima = this.pegaCelula(posicao + 1);
-            Celula anterior = this.pegaCelula(posicao - 1);
-            Celula nova =  new Celula(anterior.getProxima(), proxima.getProxima(), elemento);
+            Celula nova = new Celula(proxima, anterior, elemento);
             anterior.setProxima(nova);
             proxima.setAnterior(nova);
             this.totalDeElementos++;
